@@ -1,0 +1,6 @@
+transformers
+accelerate
+datasets
+huggingface_hub
+evaluate
+rouge_score
