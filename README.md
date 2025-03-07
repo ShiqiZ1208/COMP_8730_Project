@@ -2,10 +2,13 @@
 Abstract:
 This proposal addresses the challenge of generating concise, accurate, and domain-specific abstractive summaries for lectures using advanced natural language processing (NLP) techniques. While large language models (LLMs) like BART are highly effective for general summarization, they often struggle with specialized tasks such as lecture summarization, which requires handling unique terminology, theoretical concepts, and teaching methods that need tailored adaptation. Our approach combines parameter-efficient LoRA fine-tuning with concepts from Generative Adversarial Networks (GANs) to improve the domain specificity and coherence of the generated summaries. By leveraging lecture transcripts from various fields, we aim to bridge the gap between general-purpose LLMs and the specialized requirements of educational lecture summaries.
 ## Table of Contents
+- [colab_example](#colab)
 - [Installation](#installation)
 - [run](#run)
 - [License](#license)
 
+## Colab
+see the [Example_notebook.ipynb](Example_notebook.ipynb)
 ## Installation
 1. **Clone the repository**:
     ```bash
