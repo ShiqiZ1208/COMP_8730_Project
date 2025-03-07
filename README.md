@@ -8,8 +8,10 @@ This proposal addresses the challenge of generating concise, accurate, and domai
 
 ## Installation
 1. Clone the repository:
+2. '''bash
   git clone [https://github.com/your-username/project-name.git](https://github.com/ShiqiZ1208/COMP_8730_Project.git)
-2. Install dependencies:
+  '''
+4. Install dependencies:
    pip install -r requirement.txt
    
 ## run
