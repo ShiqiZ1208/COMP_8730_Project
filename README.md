@@ -7,22 +7,35 @@ This proposal addresses the challenge of generating concise, accurate, and domai
 - [License](#license)
 
 ## Installation
-1. Clone the repository:
-   '''
-  git clone [https://github.com/your-username/project-name.git](https://github.com/ShiqiZ1208/COMP_8730_Project.git)
-  '''
-2. Install dependencies:
-   '''
-   pip install -r requirement.txt
-   '''
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/project-name.git
+    ```
+2. **Navigate into the project directory**:
+    ```bash
+    cd "./COMP_8730_Project"
+    ```
+3. **Install dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
    
 ## run
 1. train the model from scratch with batch_size=5, num_epoch=1, and save both Generator and Discriminator model to ./SaveModel
+   ```bash
   python main.py -o train -b 5 -e 1 -save true -l false
+  ```
 2. continue train the model from Generator_Path and Discriminator_Path with batch_size=5, num_epoch=1, and save both Generator and Discriminator model to ./SaveModel with continue_trained as prefix
-  python main.py -o train -b 5 -e 1 -save true -l true -g 'Generator_Path' -d 'Discriminator_Path'
-3. predict using the model from Generator_Path with input_text file from Input_Path and save a txt doc in ./Summary with summary of as prefix
+```bash
+python main.py -o train -b 5 -e 1 -save true -l true -g 'Generator_Path' -d 'Discriminator_Path'
+```
+4. predict using the model from Generator_Path with input_text file from Input_Path and save a txt doc in ./Summary with summary of as prefix
+   ```bash
   python main.py -o predict -g 'Generator_Path' -i 'Input_Path'
+  ```
 
 ## License
 1. This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+For further inquiries, please contact [Zhang Shiqi](ZHANG3T3@uwindsor.ca).
