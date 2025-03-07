@@ -8,11 +8,13 @@ This proposal addresses the challenge of generating concise, accurate, and domai
 
 ## Installation
 1. Clone the repository:
-2. '''bash
+   '''
   git clone [https://github.com/your-username/project-name.git](https://github.com/ShiqiZ1208/COMP_8730_Project.git)
   '''
-4. Install dependencies:
+2. Install dependencies:
+   '''
    pip install -r requirement.txt
+   '''
    
 ## run
 1. train the model from scratch with batch_size=5, num_epoch=1, and save both Generator and Discriminator model to ./SaveModel
