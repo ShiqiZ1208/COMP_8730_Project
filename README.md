@@ -21,11 +21,10 @@ This proposal addresses the challenge of generating concise, accurate, and domai
     ```
    
 ## run
-1. **train the model**
+1. **train the model** train the model from scratch with batch_size=5, num_epoch=1, and save both Generator and Discriminator model to ./SaveModel
     ```bash
     python main.py -o train -b 5 -e 1 -save true -l false
     ```
-  train the model from scratch with batch_size=5, num_epoch=1, and save both Generator and Discriminator model to ./SaveModel
 2. **continue train the model**
     ```bash
     python main.py -o train -b 5 -e 1 -save true -l true -g 'Generator_Path' -d 'Discriminator_Path'
