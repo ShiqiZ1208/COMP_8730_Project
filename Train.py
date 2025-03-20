@@ -12,7 +12,7 @@ from transformers import BartTokenizer, AutoModelForSeq2SeqLM, AutoConfig, BertT
 from datasets import load_dataset
 from custom_datasets import create_dataset
 
-seed = 42
+seed = 0
 torch.manual_seed(seed)
 torch.cuda.manual_seed_all(seed)
 
