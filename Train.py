@@ -210,8 +210,20 @@ def train_model(n_epochs, minibatch_sizes, is_save, is_load=False, pathG=None, p
           torch.save(NetG, f"./SaveModel/continue_trained_lora_bart_{num_epochs}_{minibatch_sizes}")
           torch.save(NetD, f"./SaveModel/continue_trained_lora_bert_{num_epochs}_{minibatch_sizes}")
         else:
-          torch.save(NetG, f"./SaveModel/lora_bart_{num_epochs}_{minibatch_sizes}")
-          torch.save(NetD, f"./SaveModel/lora_bert_{num_epochs}_{minibatch_sizes}")
+            checkpoint1 = {
+            'model_state_dict': NetG.state_dict(),
+            'optimizer_state_dict': optimizerG.state_dict(),
+            'scheduler_state_dict': lr_schedulerG.state_dict(),
+            'epoch': num_epochs
+              }
+            torch.save(checkpoint1, f"./SaveModel/lora_bart_{num_epochs}_{minibatch_sizes}")
+            checkpoint2 = {
+            'model_state_dict': NetD.state_dict(),
+            'optimizer_state_dict': optimizerD.state_dict(),
+            'scheduler_state_dict': lr_schedulerD.state_dict(),
+            'epoch': num_epochs
+              }
+            torch.save(checkpoint2, f"./SaveModel/lora_bert_{num_epochs}_{minibatch_sizes}")
 
 
 def model_predict(input_texts_file, pathG):
