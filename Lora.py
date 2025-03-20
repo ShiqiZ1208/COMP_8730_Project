@@ -4,6 +4,10 @@ import torch.nn as nn
 import torch
 from functools import partial
 
+seed = 42
+torch.manual_seed(seed)
+torch.cuda.manual_seed_all(seed)
+
 class LoRALayer(nn.Module):
     def __init__(self, in_dim, out_dim, rank, alpha):
         super().__init__()
