@@ -1,0 +1,65 @@
+Epoch:0    | validation_loss:9.1963
+
+rouge1:0.3787| rouge2:0.1233| rougeL:0.2231| rougeLsum:0.2231
+
+
+Epoch:0    | validation_loss:1.0728
+
+rouge1:0.4986| rouge2:0.2432| rougeL:0.3460| rougeLsum:0.3460
+
+Epoch:0    | validation_loss:1.0811
+
+rouge1:0.4919| rouge2:0.2315| rougeL:0.3508| rougeLsum:0.3508
+
+
+
+
+
+
+
+
+
+with no GAN loss:
+
+
+Epoch:0    | validation_loss:1.1604
+
+rouge1:0.5267| rouge2:0.2515| rougeL:0.3484| rougeLsum:0.3484
+
+
+Epoch:1    | validation_loss:0.9867
+
+rouge1:0.5446| rouge2:0.2671| rougeL:0.4066| rougeLsum:0.4066
+
+
+Epoch:2    | validation_loss:0.9538
+
+rouge1:0.5615| rouge2:0.2823| rougeL:0.3894| rougeLsum:0.3894
+
+
+Epoch:3    | validation_loss:0.9460
+
+rouge1:0.5625| rouge2:0.2704| rougeL:0.3677| rougeLsum:0.3677
+
+
+with GAN loss:
+
+Epoch:0    | validation_loss:1.1817
+
+rouge1:0.4490| rouge2:0.1764| rougeL:0.2786| rougeLsum:0.2786
+
+
+Epoch:1    | validation_loss:0.9863
+
+rouge1:0.5310| rouge2:0.2775| rougeL:0.3870| rougeLsum:0.3870
+
+
+Epoch:2    | validation_loss:0.9560
+
+rouge1:0.5895| rouge2:0.3011| rougeL:0.4131| rougeLsum:0.4131
+
+
+Epoch:3    | validation_loss:0.9485
+
+rouge1:0.5218| rouge2:0.2461| rougeL:0.3527| rougeLsum:0.3527
+
