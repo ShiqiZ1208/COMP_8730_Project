@@ -59,7 +59,7 @@ def train_model(n_epochs, minibatch_sizes, is_save, is_load=False, pathG=None, p
       NetD = Lora_fine_tuning_BERT(BaseD_model)
 
 ########################################## create datasets ################################################################
-    t_dataset, v_dataset = create_dataset() # load datasets
+    t_dataset, v_dataset, test_dataset = create_dataset() # load datasets
     train_dataloader = DataLoader(t_dataset, shuffle=True, batch_size=minibatch_sizes)
     eval_dataloader = DataLoader(v_dataset, shuffle=True, batch_size=minibatch_sizes)
     rouge = evaluate.load("rouge") #load rouge socre evalutation
