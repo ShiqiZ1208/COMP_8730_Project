@@ -114,20 +114,23 @@ def create_dataset(is_argument = False,is_read=False,lecture_path=None, summary_
             read_article_list = file.read().split("\n\n")  # Split by empty lines (paragraphs)
 
     else: #get the list of data from Summary and Lecture
-        t_Lecture = list(data_set[3][:900])
-        t_summary = list(data_set[4][:900])
-        v_Lecture = list(data_set[3][900:])
-        v_summary = list(data_set[4][900:])
+        t_Lecture = list(data_set[3][:800])
+        t_summary = list(data_set[4][:800])
+        v_Lecture = list(data_set[3][800:900])
+        v_summary = list(data_set[4][800:900])
+        test_Lecture = list(data_set[3][900:])
+        test_summary = list(data_set[4][900:])
         # create and return datasets
         train_dataset = GANBARTDataset(t_Lecture, t_summary)
         validation_dataset = GANBARTDataset(v_Lecture, v_summary)
+        test_dataset = GANBARTDataset(test_Lecture, test_summary)
         del data_set
         del t_Lecture
         del t_summary
         del v_Lecture
         del v_summary
 
-        return train_dataset, validation_dataset
+        return train_dataset, validation_dataset, test_dataset
 
 def test_case(): # not yet implement
     alist = ["hello how are you man?","I am not a small piglet."]
