@@ -202,9 +202,10 @@ def train_model(n_epochs, minibatch_sizes, is_save, is_load=False, pathG=None, p
         print(f"\n======================================End Validation for Epoch: {epochs}==================================")
 
         epochs += 1
+        torch.save(NetG, f"./SaveModel/lora_bart_{epoch}_{minibatch_sizes}")
 
     print("\n=============================================end training==================================")
-
+    
     if is_save:
         if is_load:
           torch.save(NetG, f"./SaveModel/continue_trained_lora_bart_{num_epochs}_{minibatch_sizes}")
