@@ -44,6 +44,9 @@ see the [Example_notebook.ipynb](Example_notebook.ipynb) *random seed has change
     ```bash
     python main.py -o evaluate -g 'Generator_Path' -base False
     ```
+## ckpt
+1. Here is the google drive link to ckpt BART is fine-tune with Lora BART and BARTGAN is training using GAN
+    [ckpt](https://drive.google.com/drive/folders/1qekUQg5TTpDGvjr1wOI25rxmFJ_7_Ta1?usp=sharing)
 ## License
 1. This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
