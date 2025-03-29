@@ -98,13 +98,15 @@ elif options.lower() == "predict":
   else:
           print(f"The file {t_input} does not exist.")
           raise Exception("input error: input file not exist")
-          
-if is_base.lower() == "true":
-  is_baseline = True
-elif is_base.lower() == "false":
-  is_baseline = False
+if isinstance(is_load, str):          
+    if is_base.lower() == "true":
+      is_baseline = True
+    elif is_base.lower() == "false":
+      is_baseline = False
+    else:
+      pass
 else:
-  pass
+  raise Exception("base error: please enter str")
 
 if isinstance(options, str):
     if options.lower() == "train":
