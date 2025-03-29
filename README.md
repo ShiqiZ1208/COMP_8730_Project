@@ -24,9 +24,9 @@ see the [Example_notebook.ipynb](Example_notebook.ipynb) *random seed has change
     ```
    
 ## run
-1. **train the model** from scratch with batch_size=5, num_epoch=1, and save both Generator and Discriminator model to ./SaveModel
+1. **train the model** from scratch with batch_size=5, num_epoch=1, and save both Generator and Discriminator model to ./SaveModel and save generator every epoch to ./Testmodel
     ```bash
-    python main.py -o train -b 5 -e 1 -save true -l false
+    python main.py -o train -b 5 -e 1 -save true -l false -mode GAN
     ```
 2. **continue train the model** from Generator_Path and Discriminator_Path with batch_size=5, num_epoch=1, and save both Generator and Discriminator model to ./SaveModel with continue_trained as prefix
     ```bash
@@ -34,7 +34,15 @@ see the [Example_notebook.ipynb](Example_notebook.ipynb) *random seed has change
     ```
 3. **predict** using the model from Generator_Path with input_text file from Input_Path and save a txt doc in ./Summary with summary of as prefix
     ```bash
-    python main.py -o predict -g 'Generator_Path' -i 'Input_Path'
+    python main.py -o predict -g 'Generator_Path' -i 'Input_Path
+    ```
+4. **train the lora model** from scratch with batch_size=5, num_epoch=1, and save Generator every epoch to ./BARTmodel
+    ```bash
+    python main.py -o train -b 5 -e 1 -save true -l false -mode BART
+    ```
+5. **Evaluation** using the model from Generator ckpt calculate the ROUGE score of the model using test datasets. If -base true it will evaluate the base model.
+    ```bash
+    python main.py -o evaluate -g 'Generator_Path' -base False
     ```
 ## License
 1. This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
