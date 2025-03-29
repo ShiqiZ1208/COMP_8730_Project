@@ -103,6 +103,8 @@ if is_base.lower() == "true":
   is_baseline = True
 elif is_base.lower() == "false":
   is_baseline = False
+else:
+  pass
 
 if isinstance(options, str):
     if options.lower() == "train":
