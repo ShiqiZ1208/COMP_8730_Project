@@ -44,6 +44,11 @@ see the [Example_notebook.ipynb](Example_notebook.ipynb) *random seed has change
     ```bash
     python main.py -o evaluate -g 'Generator_Path' -base False
     ```
+6. **Data augmentation** using the Lecture_aug.py to create augmentation datasets from Lecture datasets, num indicate how many data you want augmented.
+    ```bash
+    from Lecture_aug import data_aug
+    data_aug(900)
+    ```
 ## ckpt
 1. Here is the google drive link to ckpt BART is fine-tune with Lora BART and BARTGAN is training using GAN
     [ckpt](https://drive.google.com/drive/folders/1qekUQg5TTpDGvjr1wOI25rxmFJ_7_Ta1?usp=sharing)
