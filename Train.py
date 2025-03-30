@@ -237,9 +237,9 @@ def train_model(n_epochs, minibatch_sizes, is_save=False, is_load=False, pathG=N
 
         epochs += 1
         if BART_only ==False:
-          torch.save(NetG, "./Testmodel/lora_bartGAN_{epoch}_{minibatch_sizes}.pth")
+          torch.save(NetG, f"./Testmodel/lora_bartGAN_{epoch}_{minibatch_sizes}.pth")
         else:
-          torch.save(NetG, "./BARTmodel/lora_bart_{epoch}_{minibatch_sizes}.pth")
+          torch.save(NetG, f"./BARTmodel/lora_bart_{epoch}_{minibatch_sizes}.pth")
 
     print("\n=============================================end training==================================")
     if BART_only == True:
