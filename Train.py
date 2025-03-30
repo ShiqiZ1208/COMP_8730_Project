@@ -150,7 +150,7 @@ def train_model(n_epochs, minibatch_sizes, is_save=False, is_load=False, pathG=N
             bert_fmask = bert_fmask.to(device)
 
             # calculate loss using Bart generate summary with fake label
-            output_fd = NetD(bert_input_id, bert_mask, labels=fl)
+            output_fd = NetD(bert_finput_id, bert_fmask, labels=fl)
             loss2 = output_fd.loss
             loss2.backward()
 
@@ -165,7 +165,7 @@ def train_model(n_epochs, minibatch_sizes, is_save=False, is_load=False, pathG=N
             # calculate loss for both the CE loss from generated summary to true summary for BART
             # calculate the loss using fake summary and real label
             output_g = NetG(input_ids=input_ids, attention_mask=attention_mask, labels = labels)
-            output_fd = NetD(bert_input_id, bert_mask, labels=tl)
+            output_fd = NetD(bert_finput_id, bert_fmask, labels=tl)
 
             # calculate final loss combine two loss before
             if BART_only == True:
