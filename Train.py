@@ -99,8 +99,6 @@ def train_model(n_epochs, minibatch_sizes, is_save=False, is_load=False, pathG=N
 
 
     epochs = 0
-    NetD.train()
-    NetG.train()
     loss_record = []
     Rouge_record = []
     best_val_loss = float('inf')
@@ -111,6 +109,8 @@ def train_model(n_epochs, minibatch_sizes, is_save=False, is_load=False, pathG=N
     for epoch in range(num_epochs):
         batches = 0
         for batch in train_dataloader:
+            NetD.train()
+            NetG.train()
             # Create real label and fake label for discrimnator
             oneslabel = torch.ones(minibatch_sizes)
             zeroslabel = torch.zeros(minibatch_sizes)
