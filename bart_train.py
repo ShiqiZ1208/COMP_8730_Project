@@ -84,7 +84,6 @@ def Btrain_model(n_epochs, minibatch_sizes):
 
 
     epochs = 0
-    BART.train()
     loss_record = []
     Rouge_record = []
     best_val_loss = float('inf')
@@ -94,6 +93,7 @@ def Btrain_model(n_epochs, minibatch_sizes):
     patience = 3
     for epoch in range(num_epochs):
         batches = 0
+        BART.train()
         for batch in train_dataloader:
 
             # load information from batch
