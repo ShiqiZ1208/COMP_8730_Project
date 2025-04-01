@@ -20,7 +20,7 @@ see the [Example_notebook.ipynb](Example_notebook.ipynb) *random seed has change
     ```
 3. **Install dependencies**:
     ```bash
-    pip install -r requirements.txt
+    pip install -r requirement.txt
     ```
    
 ## run
